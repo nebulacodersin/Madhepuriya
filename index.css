@@ -1,0 +1,326 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+body::-webkit-scrollbar{
+  width:5px;
+}
+
+body::-webkit-scrollbar-track{
+  background-color:#ffa666;
+  border-radius:50px;
+}
+
+body::-webkit-scrollbar-thumb{
+  cursor:pointer;
+  background-color:#ffffff;
+  border-radius:50px;
+}
+.bar{
+  padding-top: 270px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+#popular-product{
+  margin: 80px auto;
+}
+.product-container,
+.product-heading{
+    width: 100%;
+}
+.product-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+}
+.grocery-item .box:hover{
+  background-color: #4eb060;
+  color: #ffffff;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+.grocery-item img{
+  width: 80%;
+  height: 170px;
+  object-fit: contain;
+  object-position: center;
+  margin: auto;
+}
+.grocery-item{
+  width: 300px;
+  border: 2px solid  brown;
+  border-radius: 20px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+ 
+}
+.grocery-item:hover{
+  cursor: pointer;
+  transition:all ease 0.3s
+}
+.grocery-item:hover img{
+  transform: scale(1.1);
+  transition:all ease 0.3s
+}
+
+.grocery-item strong{
+  color:  rgb(167, 50, 63);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.grocery-item .quantity{
+  color:  rgb(167, 50, 63);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.grocery-item .price{
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: rgb(167, 50, 63);
+}
+.grocery-item .cart-btn{
+  width:100%;
+  height: 40px;
+  background-color: #ecf7ee;
+  color: #0e0f0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  transition: all ease 0.3s;
+}
+.grocery-item .cart-btn i{
+  margin-right: 10px;
+}
+.grocery-item .cart-btn:hover{
+  background-color: #74f187;
+  color: #0b0a0a;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.cartbox{
+  padding: 25px 25px;
+  top:0;
+  margin-left: auto;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color:#ffffff34;
+  backdrop-filter: blur(50px);
+  border-radius: 20px;
+  position: fixed;
+  display: none;
+  z-index: 1;
+  overflow: scroll;
+}
+.cartbox h5{
+  text-align: center;
+}
+.cartbox h5:hover{
+  border: 2px solid rgb(167, 50, 63);
+  border-radius: 20px;
+}
+.cart-item{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px 10px;
+  border: 1px solid rgb(167, 50, 63);
+  border-radius: 5px;
+}
+img{
+  border-radius: 20px;
+}
+.cart-item span{
+  margin-left: 5px;
+  font-size: 20px;
+  color:#42403f;
+}
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: rgb(167, 50, 63);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button.remove {
+  background-color: rgba(255, 255, 255, 0);
+}
+button.counter{
+  background-color: #ffffff00;
+  text-align: center;
+  border: 0;
+  color:rgb(167, 50, 63);
+  font-size: 20px;
+  font-weight: bold;
+}
+span.count-num{
+  text-align: center;
+  align-items: center;
+  padding: 9px 2px;
+  color:rgb(167, 50, 63);
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 18px;
+}
+button#checkout {
+  display: block;
+  margin: 20px 0;
+  width: 90%;
+  margin-left: 5%;
+}
+ /*jiya*/
+ #category,
+#popular-product,
+#popular-bundle-pack,
+#partner{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+.category-heading,
+.product-heading,
+.partner-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.category-heading h2,
+.product-heading h3,
+.partner-heading h3{
+    font-size: 1.56rem;
+    font-weight: 700;
+    color: #202020;
+    letter-spacing: 0.5px;
+}
+.category-heading span,
+.product-heading span{
+    color: #a7a7a7;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.category-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
+}
+.category-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    border-radius: 10px;
+    min-height: 130px;
+    width: 120px;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+.category-box img{
+    height: 80px;
+    width: 100px;
+    object-fit: fill;
+    object-position: center;
+    transition: all ease 0.1s;
+}
+.category-box span{
+    color: #393939;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+}
+.category-box:hover img{
+    transform: scale(1.1);
+    transition: all ease 0.1s;
+}
+
+#search-banner{
+  max-width: 100%;
+  height: 500px;
+  border-radius: 40px;
+  background-color: #cef3bf;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background-image: url(plate.jpg);
+  background-repeat: no-repeat;
+  background-size: cover ;
+  background-position:left ;
+}
+
+.search-banner-text{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-left: 70px;
+  position: relative;
+}
+.search-banner-text h1{
+  font-size: 3rem;
+  line-height: 55px;
+  color:black;
+  background-color: rgb(221, 228, 232);
+  margin-right: 160px;
+  
+}
+.search-banner-text strong{
+  color: #3a69c1;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+.search-box{
+  background-color: #ffffff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  padding: 0px 5px 0px 2px;
+  border-radius: 30px;
+}
+.search-box svg{
+  font-size: 1.3rem;
+  color: #3b3b3b;
+  margin: 0px 10px;
+}
+.search-box #search-bar{
+  height: 40px;
+  border: none;
+  width: 100%;
+  padding: 0px 10px;
+  outline: none;
+}
+.search-box .search-btn{
+  width:30%;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #4eb060;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.search-box .search-btn:hover{
+  background-color: #5ccf71;
+  transition: all ease 0.3s;
+}

@@ -1,0 +1,150 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    text-decoration: none;
+
+}
+/*Footer Section*/
+footer{
+    background:linear-gradient(35deg,rgb(164, 80, 90),rgb(167, 50, 63));
+    margin-top: 5%;
+    bottom: 0;
+    top:100%;
+    width: 100%;
+    color:#fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+}
+
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+.col h2{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+.col:nth-child(2){
+    flex-basis: 15%;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+ul li a{
+    text-decoration: none;
+    color:#fff;
+}
+.newsletterform{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 50px;
+}
+.newsletterform svg{
+    font-size: 1px;
+    margin-right:10px;
+    fill:#fff;
+}
+.newsletterform input{
+    width: 100%;
+    background: transparent;
+    color:#fff;
+    border: 0;
+    outline: none;
+}
+.newsletterform input::placeholder{
+    color:#fff;
+}
+.newsletterform button{
+    background:transparent ;
+    border:0;
+    outline: none;
+    cursor: pointer;
+}
+.newsletterform button svg{
+    font-size: 15px;
+    color:#fff;
+}
+
+.socialicon .fa{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color:#000;
+    background-color: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    margin: 20px auto;
+}
+.copyright{
+    text-align: center;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top:25px;
+    overflow: hidden;
+}
+.underline span{
+    width: 15px;
+    height: 100%;
+    background:#f66517;
+    border-radius: 3px;
+    position: absolute;
+    top:0;
+    left: 10px;
+    animation: moving 2s infinite;
+}
+iframe{
+    height: 10%;
+    width: 100%;
+    border-radius:20px;
+}
+@keyframes moving {
+    0%{
+        left:-20px;
+    }
+    100%{
+        left: 100%;
+    }
+    
+}
+@media(max-width:1024px){
+    .underline{
+        display: none;
+    }
+}
+@media(max-width:600px){
+    .row{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
